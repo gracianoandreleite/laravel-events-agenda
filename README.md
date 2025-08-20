@@ -1,66 +1,88 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Agenda de Eventos com Laravel 9 📅
+Este é um sistema simples de **agenda de eventos** desenvolvido com
+**Laravel 9**, utilizando **MySQL** como banco de dados, **Jetstream**
+para autenticação e **Bootstrap** para estilização.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+------------------------------------------------------------------------
 
-## About Laravel
+## Demonstração
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+![Tela Inicial](./public/img/preview.png)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+------------------------------------------------------------------------
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Tecnologias Utilizadas
 
-## Learning Laravel
+-   [Laravel 9](https://laravel.com/docs/9.x)
+-   [MySQL](https://www.mysql.com/)
+-   [Jetstream](https://jetstream.laravel.com/2.x/introduction.html)
+-   [Bootstrap](https://getbootstrap.com/)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+------------------------------------------------------------------------
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Let's instail 🚀:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Siga os passos abaixo para rodar o projeto localmente.
 
-## Laravel Sponsors
+### 1️⃣ Clonar o repositório
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+``` bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd laravel-events-agenda
+```
 
-### Premium Partners
+### 2️⃣ Instalar dependências
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+``` bash
+composer install
+npm install
+```
 
-## Contributing
+### 3️⃣ Configurar o ambiente
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Copie o arquivo `.env.example` e configure:
 
-## Code of Conduct
+``` bash
+cp .env.example .env
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Edite o `.env` e configure a conexão com o MySQL:
 
-## Security Vulnerabilities
+``` env
+DB_DATABASE=events_agenda
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 4️⃣ Gerar chave da aplicação
 
-## License
+``` bash
+php artisan key:generate
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 6️⃣ Rodar o servidor local
+
+``` bash
+php artisan serve
+```
+
+Acesse no navegador: **http://127.0.0.1:8000**
+
+------------------------------------------------------------------------
+
+## Contribuição
+
+Contribuições são bem-vindas!\
+Faça um **fork**, crie uma branch, faça suas alterações e abra um **Pull
+Request**.
+
+------------------------------------------------------------------------
+
+## Licença
+
+Este projeto está sob a licença MIT. Consulte o arquivo
+[LICENSE](LICENSE) para mais detalhes.
+
+------------------------------------------------------------------------
+
+Desenvolvido por **Graciano André Leite**
